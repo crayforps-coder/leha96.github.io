@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Пополнение Steam</title>
+  <!-- подключаю общее оформление -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="registration topup">
+    <!-- картинка задается в файле со стилями -->
+    <div class="banner" role="img" aria-label="Логотип Steam на фоне игр"></div>
+    <h1>Пополнение Steam</h1>
+
+    <!-- общий блок для двух колонок -->
+    <div class="topup-layout">
+      <!-- информация слева и ссылка на отдельную инструкцию -->
+      <aside class="important-info">
+        <h2>Важная информация</h2>
+        <p>Для успешной оплаты рекомендуем использовать IP-адрес России.</p>
+        <p><a href="instructions.html">Инструкция для новых аккаунтов и регионов с ограничениями (Крым, ЛНР, ДНР)</a></p>
+        <p>Если регион отличается, воспользуйтесь картами оплаты Steam.</p>
+      </aside>
+
+    <!-- форма справа, после проверки открывает сообщение об оплате -->
+    <form action="result.html" method="get">
+      <div class="fields">
+        <p>Введите логин и сумму. Выберите страну и способ оплаты.</p>
+        <!-- логин: от трех знаков, английские буквы, цифры и подчеркивание -->
+        <label for="login">Логин Steam</label>
+        <input type="text" id="login" placeholder="Введите логин"
+          pattern="[A-Za-z0-9_]{3,}" title="Не меньше 3 знаков: английские буквы, цифры или _" required>
+
+        <!-- сумма: целое число больше нуля, без стрелок счетчика -->
+        <label for="amount">Сумма в рублях</label>
+        <input type="text" id="amount" placeholder="Например, 500"
+          inputmode="numeric" pattern="[1-9][0-9]*"
+          title="Введите сумму от 1 рубля, без копеек" required>
+
+        <!-- список стран, нужно выбрать один вариант -->
+        <label for="region">Страна аккаунта</label>
+        <select id="region" title="Выберите страну из списка" required>
+          <option value="">Выберите страну</option>
+          <option value="ru">Россия</option>
+          <option value="kz">Казахстан</option>
+        </select>
+
+        <!-- одинаковое имя объединяет способы оплаты, выбрать можно только один -->
+        <fieldset class="payment-methods">
+          <legend>Способ оплаты</legend>
+          <label class="payment-option">
+            <!-- этот способ выбран сразу при открытии страницы -->
+            <input type="radio" name="payment" value="sbp" checked>
+            <span>СБП</span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="card">
+            <span>Банковская карта</span>
+          </label>
+        </fieldset>
+
+        <p>Макет без настоящих платежей</p>
+      </div>
+
+      <!-- кнопка открывает следующую страницу, настоящего платежа нет -->
+      <div class="actions">
+        <button type="submit">Оплатить</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</body>
+</html>

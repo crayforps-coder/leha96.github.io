@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- кодировка для русских букв -->
+  <meta charset="UTF-8">
+  <title>Регистрация</title>
+  <!-- подключаю файл с оформлением -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="registration">
+    <h1>Регистрация</h1>
+
+    <!-- браузер проверяет поля и открывает страницу пополнения -->
+    <form action="topup.html" method="get">
+      <div class="fields">
+        <!-- приветствие над полями -->
+        <h2>Добро пожаловать на сайт Steam Payment</h2>
+        <p>Заполните все поля. Пароль — не короче 6 знаков.</p>
+        <!-- почта обязательна, браузер проверяет ее формат -->
+        <input type="email" placeholder="Введите почту"
+          aria-label="Почта" title="Введите почту, например: name@mail.ru" required>
+        <!-- пароль скрыт, нужно хотя бы 6 знаков -->
+        <input type="password" placeholder="Придумайте пароль"
+          aria-label="Пароль" title="Введите не меньше 6 знаков" minlength="6" required>
+        <!-- повтор пароля, совпадение с первым полем не проверяется -->
+        <input type="password" placeholder="Повторите пароль"
+          aria-label="Повторите пароль" title="Введите пароль ещё раз" minlength="6" required>
+        <!-- обычная обязательная галочка, это не настоящая проверка роботов -->
+        <label class="robot-check">
+          <input type="checkbox" required>
+          Я не робот
+        </label>
+      </div>
+
+      <!-- кнопка перехода к пополнению -->
+      <div class="actions">
+        <button type="submit">Дальше</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
