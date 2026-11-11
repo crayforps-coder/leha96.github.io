@@ -1,17 +1,17 @@
-/* шрифт и отступы всей страницы */
+
 body {
   margin: 16px;
   font-family: Arial, sans-serif;
 }
 
-/* основной блок сайта, ограничиваю ширину и ставлю по центру */
+
 .registration {
   max-width: 1120px;
   margin: 0 auto;
   background: #eef8fa;
 }
 
-/* картинка сверху, здесь можно поменять файл и высоту */
+
 .banner {
   height: 300px;
   background-color: #17212d;
@@ -20,7 +20,7 @@ body {
   background-size: cover;
 }
 
-/* размер, фон и отступы главного заголовка */
+
 h1 {
   margin: 0;
   padding: 30px;
@@ -30,12 +30,12 @@ h1 {
   font-weight: normal;
 }
 
-/* отступы внутри блока с полями */
+
 .fields {
   padding: 30px;
 }
 
-/* размер, рамка и фон полей ввода и списка стран */
+
 input, select {
   box-sizing: border-box;
   display: block;
@@ -47,21 +47,21 @@ input, select {
   font-size: 20px;
 }
 
-/* подписи над полями */
+
 label {
   display: block;
   margin-bottom: 10px;
   font-size: 20px;
 }
 
-/* ставлю галочку и текст рядом */
+
 .robot-check {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-/* размер галочки я не робот */
+
 .robot-check input {
   width: 22px;
   height: 22px;
@@ -69,12 +69,12 @@ label {
   padding: 0;
 }
 
-/* расстояние между строками текста */
+
 p {
   line-height: 1.5;
 }
 
-/* блок с основной кнопкой, прижимаю кнопку вправо */
+ 
 .actions {
   padding: 30px;
   border-top: 2px solid #cfdcde;
@@ -82,7 +82,7 @@ p {
   text-align: right;
 }
 
-/* общее оформление кнопок */
+  
 button {
   padding: 16px 45px;
   border: none;
@@ -91,13 +91,13 @@ button {
   font-size: 22px;
 }
 
-/* синий фон и белый текст заголовка на странице пополнения и инструкции */
+
 .topup h1 {
   background: #1b2838;
   color: white;
 }
 
-/* делаю кнопку оплаты шире, синей и с круглыми углами */
+
 .topup button {
   width: 360px;
   max-width: 100%;
@@ -105,7 +105,7 @@ button {
   background: #2475c5;
 }
 
-/* две колонки: слева информация, справа форма */
+
 .topup-layout {
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr); /* слева 280 пикселей, справа оставшееся место */
@@ -114,7 +114,7 @@ button {
   align-items: start;
 }
 
-/* темный блок с важной информацией */
+
 .important-info {
   padding: 20px;
   border-radius: 12px;
@@ -122,18 +122,18 @@ button {
   color: white;
 }
 
-/* заголовок в блоке информации */
+
 .important-info h2 {
   margin: 0 0 20px;
   font-size: 23px;
 }
 
-/* цвет ссылки на инструкцию */
+
 .important-info a {
   color: #8dd4ff;
 }
 
-/* размер текста и отступы списка с инструкцией */
+
 .instructions {
   margin: 0 0 30px;
   padding-left: 30px;
@@ -141,31 +141,31 @@ button {
   line-height: 1.6;
 }
 
-/* расстояние между шагами инструкции */
+
 .instructions li {
   padding-left: 10px;
   margin-bottom: 25px;
 }
 
-/* синие жирные номера шагов */
+
 .instructions li::marker {
   color: #2475c5;
   font-weight: bold;
 }
 
-/* линии между абзацами в блоке информации */
+
 .important-info p {
   padding-bottom: 15px;
   border-bottom: 1px solid #40546b;
 }
 
-/* рамка формы, разрешаю ей сужаться вместе с колонкой */
+
 .topup-layout form {
   min-width: 0;
   border: 1px solid #cfdcde;
 }
 
-/* способы оплаты рядом, если тесно, переношу на следующую строку */
+
 .payment-methods {
   display: flex;
   flex-wrap: wrap;
@@ -175,19 +175,18 @@ button {
   border: none;
 }
 
-/* размер подписи способ оплаты */
+
 .payment-methods legend {
   font-size: 20px;
 }
 
-/* область одного способа оплаты */
 .payment-option {
   position: relative;
   margin: 0;
   cursor: pointer;
 }
 
-/* прячу обычный кружок переключателя, сам выбор продолжает работать */
+
 .payment-option input {
   position: absolute;
   width: 1px;
@@ -197,7 +196,7 @@ button {
   opacity: 0;
 }
 
-/* вместо кружка показываю текст в округлой рамке */
+
 .payment-option span {
   display: block;
   padding: 16px 25px;
@@ -207,37 +206,37 @@ button {
   color: #2475c5;
 }
 
-/* выбранный способ оплаты становится синим */
+
 .payment-option input:checked + span {
   background: #2475c5;
   color: white;
 }
 
-/* рамка показывает выбор при переходе клавишей табуляции */
+
 .payment-option input:focus-visible + span {
   outline: 2px solid #1b2838;
   outline-offset: 3px;
 }
 
-/* текст после оплаты ставлю по центру */
+
 .payment-result {
   text-align: center;
 }
 
-/* большая зеленая галочка */
+
 .success-check {
   color: #269b46;
   font-size: 80px;
 }
 
-/* убираю фон и рамку у заголовка после оплаты */
+
 .payment-result h1 {
   padding: 15px 0;
   border: none;
   background: transparent;
 }
 
-/* маленький серый текст под сообщением об оплате */
+
 .payment-note {
   color: #555;
   font-size: 14px;
